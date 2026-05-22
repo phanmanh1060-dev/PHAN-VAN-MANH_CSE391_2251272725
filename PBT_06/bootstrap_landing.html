@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Landing - E-Commerce</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-primary" href="#">Minh Anh</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active fw-medium" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-secondary" href="#">Products</a></li>
+          <li class="nav-item"><a class="nav-link text-secondary" href="#">About Us</a></li>
+        </ul>
+
+        <form class="d-flex me-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Tìm kiếm hoa đẹp..." aria-label="Search">
+          <button class="btn btn-outline-primary" type="submit">Tìm</button>
+        </form>
+
+        <button class="btn btn-outline-dark position-relative" type="button">
+          🛒 <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">4</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="4000">
+        <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=1200&h=450&q=80" class="d-block w-100 object-fit-cover" style="max-height: 450px;" alt="Sale 50%">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 text-white rounded-3 p-4 bottom-50 translate-middle-y">
+          <h1 class="fw-bold text-uppercase display-4">Sale Sập Sàn 50%</h1>
+          <p class="fs-5 m-0">Áp dụng cho toàn bộ các mẫu hoa bó thịnh hành nhất tuần này.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=1200&h=450&q=80" class="d-block w-100 object-fit-cover" style="max-height: 450px;" alt="New Collection">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 text-white rounded-3 p-4 bottom-50 translate-middle-y">
+          <h1 class="fw-bold text-uppercase display-4">Bộ Sưu Tập Mới</h1>
+          <p class="fs-5 m-0">Mang hương vị ngọt ngào của mùa xuân vào không gian sống của bạn.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=1200&h=450&q=80" class="d-block w-100 object-fit-cover" style="max-height: 450px;" alt="Hot Deals">
+        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 text-white rounded-3 p-4 bottom-50 translate-middle-y">
+          <h1 class="fw-bold text-uppercase display-4">Deal Hot Mỗi Ngày</h1>
+          <p class="fs-5 m-0">Đăng ký thành viên nhận ngay voucher giảm 100k cho đơn đầu tiên.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <main class="container my-5">
+    <h2 class="text-center fw-bold mb-4 position-relative pb-2">Sản Phẩm Nổi Bật</h2>
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 position-relative overflow-hidden">
+          <span class="badge bg-danger position-absolute top-0 start-0 m-3 px-3 py-2 z-1">Sale</span>
+          <img src="https://hoayeuthuong.com/hinh-hoa-chinh/hoa-chuc-mung/4041_doa-hoa-diu-dang.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Đóa hoa dịu dàng">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="card-title fw-semibold text-dark">Đóa Hoa Dịu Dàng</h5>
+              <p class="card-text text-danger fw-bold fs-5">$100 <span class="text-decoration-line-through text-muted fs-6 fw-normal">$200</span></p>
+            </div>
+            <button class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalProduct1">Xem nhanh</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 overflow-hidden">
+          <img src="https://hoayeuthuong.com/hinh-hoa-chinh/hoa-chuc-mung/3653_trai-tim-diu-dang.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Trái tim dịu dàng">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="card-title fw-semibold text-dark">Trái Tim Dịu Dàng</h5>
+              <p class="card-text text-dark fw-bold fs-5">$120</p>
+            </div>
+            <button class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalProduct2">Xem nhanh</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 overflow-hidden">
+          <img src="https://hoayeuthuong.com/hinh-hoa-chinh/hoa-chuc-mung/16060_shine-on-me.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Shine on me">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="card-title fw-semibold text-dark">Shine On Me</h5>
+              <p class="card-text text-dark fw-bold fs-5">$90</p>
+            </div>
+            <button class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalProduct3">Xem nhanh</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card h-100 shadow-sm border-0 overflow-hidden">
+          <img src="https://hoayeuthuong.com/hinh-hoa-chinh/bo-hoa-tuoi/15296_cam-tu-cau-va-em.jpg" class="card-img-top object-fit-cover" style="height: 250px;" alt="Cẩm tú cầu và em">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <div>
+              <h5 class="card-title fw-semibold text-dark">Cẩm Tú Cầu & Em</h5>
+              <p class="card-text text-dark fw-bold fs-5">$150</p>
+            </div>
+            <button class="btn btn-primary w-100 mt-3" data-bs-toggle="modal" data-bs-target="#modalProduct4">Xem nhanh</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <div class="modal fade" id="modalProduct1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title fw-bold">Chi Tiết: Đóa Hoa Dịu Dàng</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="text-center mb-3">
+            <img src="https://hoayeuthuong.com/hinh-hoa-chinh/hoa-chuc-mung/4041_doa-hoa-diu-dang.jpg" class="img-fluid rounded-3" style="max-height: 200px;" alt="">
+          </div>
+          <p><strong>Giá ưu đãi:</strong> <span class="text-danger fw-bold">$100</span></p>
+          <p class="text-secondary mb-0">Sự kết hợp tinh tế giữa hoa hồng pastel và các loại lá phụ nhập khẩu mang lại cảm giác nhẹ nhàng, lãng mạn.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalProduct2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title fw-bold">Chi Tiết: Trái Tim Dịu Dàng</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="text-center mb-3">
+            <img src="https://hoayeuthuong.com/hinh-hoa-chinh/hoa-chuc-mung/3653_trai-tim-diu-dang.jpg" class="img-fluid rounded-3" style="max-height: 200px;" alt="">
+          </div>
+          <p><strong>Giá bán:</strong> <span class="text-dark fw-bold">$120</span></p>
+          <p class="text-secondary mb-0">Hộp hoa xếp dạng hình trái tim bằng hoa hồng đỏ thắm, minh chứng cho tình yêu nồng cháy bền chặt.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalProduct3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title fw-bold">Chi Tiết: Shine On Me</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="text-center mb-3">
+            <img src="https://hoayeuthuong.com/hinh-hoa-chinh/hoa-chuc-mung/16060_shine-on-me.jpg" class="img-fluid rounded-3" style="max-height: 200px;" alt="">
+          </div>
+          <p><strong>Giá bán:</strong> <span class="text-dark fw-bold">$90</span></p>
+          <p class="text-secondary mb-0">Hoa hướng dương rực rỡ mang thông điệp năng lượng tích cực, ngập tràn ánh nắng và may mắn.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="modalProduct4" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header bg-light">
+          <h5 class="modal-title fw-bold">Chi Tiết: Cẩm Tú Cầu & Em</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <div class="text-center mb-3">
+            <img src="https://hoayeuthuong.com/hinh-hoa-chinh/bo-hoa-tuoi/15296_cam-tu-cau-va-em.jpg" class="img-fluid rounded-3" style="max-height: 200px;" alt="">
+          </div>
+          <p><strong>Giá bán:</strong> <span class="text-dark fw-bold">$150</span></p>
+          <p class="text-secondary mb-0">Bó hoa cẩm tú cầu xanh lam kết hợp tone trắng xám vô cùng sang trọng và thời thượng.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark text-white pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-md-3">
+          <h5 class="text-uppercase fw-bold text-primary mb-3">About Us</h5>
+          <ul class="list-unstyled text-secondary">
+            <li><a href="#" class="text-reset text-decoration-none d-block py-1">Câu chuyện thương hiệu</a></li>
+            <li><a href="#" class="text-reset text-decoration-none d-block py-1">Đội ngũ nghệ nhân</a></li>
+            <li><a href="#" class="text-reset text-decoration-none d-block py-1">Tin tức & Sự kiện</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h5 class="text-uppercase fw-bold text-primary mb-3">Support</h5>
+          <ul class="list-unstyled text-secondary">
+            <li><a href="#" class="text-reset text-decoration-none d-block py-1">Trung tâm trợ giúp</a></li>
+            <li><a href="#" class="text-reset text-decoration-none d-block py-1">Hướng dẫn mua hàng</a></li>
+            <li><a href="#" class="text-reset text-decoration-none d-block py-1">Kiểm tra đơn hàng</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h5 class="text-uppercase fw-bold text-primary mb-3">Policy</h5>
+          <ul class="list-unstyled text-secondary">
+            <li><a href="#" class="text-reset text-decoration-none d-block py-1">Chính sách bảo mật</a></li>
+            <li><a href="#" class="text-reset text-decoration-none d-block py-1">Chính sách đổi trả hoa</a></li>
+            <li><a href="#" class="text-reset text-decoration-none d-block py-1">Vận chuyển hỏa tốc</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h5 class="text-uppercase fw-bold text-primary mb-3">Contact</h5>
+          <ul class="list-unstyled text-secondary">
+            <li class="py-1">📍 Hà Nội, Việt Nam</li>
+            <li class="py-1">📞 Hotlines: 1900 xxxx</li>
+            <li class="py-1">✉️ Email: contact@shopflower.com</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary my-4">
+      <div class="text-center text-secondary fs-7">
+        <p class="m-0">&copy; 2026 Minh Anh. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
