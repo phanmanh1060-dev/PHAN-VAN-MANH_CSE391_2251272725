@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Nguyễn Thị Như Ý</title>
+        <style>
+            /* Thay thế cho thuộc tính border="1" đã bị loại bỏ */
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            table, th, td {
+                border: 1px solid black;
+            }
+            th, td {
+                padding: 8px;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Trang cá nhân</h1>
+            <nav>
+                <ul>
+                    <li><a href="#gioi-thieu">Về tôi</a></li>
+                    <li><a href="#ky-nang">Kỹ năng</a></li>
+                    <li><a href="#lien-he">Liên hệ</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="gioi-thieu">
+                <h2>Giới thiệu bản thân</h2>
+                <article>
+                    <!-- Sửa lỗi 1: Thêm tiêu đề cho article (có thể dùng class ẩn nếu không muốn hiện lên giao diện) -->
+                    <h3>Thông tin sinh viên</h3>
+                    <p>Xin chào! Mình là sinh viên lớp 64ANM2 tại trường Đại học Thủy Lợi. Mình có niềm đam mê với lập trình web và đang xây dựng những nền tảng đầu tiên.</p>
+                    <figure>
+                        <img src="my_photo.jpg" alt="Ảnh đại diện " width="200">
+                        <figcaption>Hình 1: Ảnh chân dung cá nhân</figcaption>
+                    </figure>
+                </article>
+            </section>
+            <section id="ky-nang">
+                <h2>Kỹ năng lập trình</h2>
+                <!-- Sửa lỗi 2: Loại bỏ border="1", việc kẻ bảng đã được xử lý bằng CSS ở trên -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kỹ năng</th>
+                            <th>Mức độ</th>
+                            <th>Ghi chú</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML5</td>
+                            <td>⭐⭐⭐</td>
+                            <td>Nắm vững các thẻ ngữ nghĩa</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td>⭐⭐</td>
+                            <td>Đang học </td>
+                        </tr>
+                        <tr>
+                            <td>C++</td>
+                            <td>⭐⭐⭐</td>
+                            <td>Cơ bản về giải thuật</td>
+                        </tr>
+                        <tr>
+                            <td>C# / WinForms</td>
+                            <td>⭐⭐</td>
+                            <td>Cơ bản</td>
+                        </tr>
+                        <tr>
+                            <td>Python</td>
+                            <td>⭐</td>
+                            <td>Cơ bản về thuật toán</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    
+        <aside id="lien-he">
+            <h3>Thông tin liên hệ</h3>
+            <p>Email: 123@gmail.com</p>
+            <p>Địa chỉ: Trường Đại học Thủy Lợi, Hà Nội</p>
+        </aside>
+    
+        <footer>
+            <p>&copy; 2026 - Bản quyền thuộc về tác giả.</p>
+        </footer>
+    </body>
+</html>

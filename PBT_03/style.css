@@ -1,0 +1,105 @@
+/* 1. RESET & BOX MODEL (5đ) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 20px;
+}
+
+/* 2. TIÊU ĐỀ & ĐIỀU HƯỚNG */
+header {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* Độ dốc nền */
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Selector Hậu duệ (Descendant) */
+nav ul {
+    list-style: none;
+    margin-top: 15px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+/* Liên kết điều hướng (5đ) */
+nav ul li a {
+    color: #aec6cf;
+    text-decoration: none; /* Không gạch chân mặc định */
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Pseudo-class :hover */
+nav ul li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Class .active cho Link đang hoạt động */
+nav ul li a.active {
+    color: #ffeb3b;
+    border-bottom: 2px solid #ffeb3b;
+}
+
+/* 3. ĐỊNH DẠNG BẢNG (5đ) */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Sụp đổ biên giới */
+    margin: 25px 0;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Hàng tiêu đề */
+thead tr {
+    background-color: #1e3c72;
+    color: white;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+/* Sọc ngựa vằn (Zebra stripes) */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hàng di chuột (Hover effect) */
+tbody tr:hover {
+    background-color: #e2e6ea;
+    cursor: pointer;
+}
+
+/* 4. FOOTER */
+footer {
+    background-color: #333;
+    color: #bbb; /* Văn bản nhạt */
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-weight: bold; /* In đậm nền/chữ */
+    border-radius: 0 0 8px 8px;
+}
+
+/* Ví dụ về ID Selector */
+#gioi-thieu {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}

@@ -1,0 +1,51 @@
+/* 1. Specificity thấp nhất */
+p {
+    color: red;                    /* 0,0,1 */
+}
+
+/* 2. */
+.text {
+    color: blue;                   /* 0,1,0 */
+}
+
+/* 3. */
+.highlight {
+    color: green;                  /* 0,1,0 */
+}
+
+/* 4. */
+p.text {
+    color: orange;                 /* 0,1,1 */
+}
+
+/* 5. */
+p.highlight {
+    color: purple;                 /* 0,1,1 */
+}
+
+/* 6. */
+[id="demo"] {
+    color: brown;                  /* 0,1,0 */
+}
+
+/* 7. */
+.text.highlight {
+    color: cyan;                   /* 0,2,0 */
+}
+
+/* 8. */
+#demo {
+    color: yellow;                 /* 0,1,1 */
+}
+
+/* 9. */
+p#demo {
+    color: pink;                   /* 0,1,2 */
+}
+
+/* 10. Specificity cao nhất */
+p#demo.text.highlight {
+    color: black;                  /* 0,1,3 */
+}
+
+/* Inline style sẽ thắng tất cả (nếu có) */

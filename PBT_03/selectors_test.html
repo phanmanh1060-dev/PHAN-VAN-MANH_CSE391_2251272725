@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra bộ chọn CSS - ShopTLU</title>
+    <style>
+        /* 1. h1 - Màu đỏ */
+        h1 { color: red; }
+
+        /* 2. .price - Nền vàng */
+        .price { background-color: yellow; }
+
+        /* 3. #app header - Viền xanh dương */
+        #app header { border: 2px solid blue; }
+
+        /* 4. nav a:first-child - Chữ in hoa */
+        nav a:first-child { text-transform: uppercase; font-weight: bold; }
+
+        /* 5. .product.featured h2 - Màu xanh lá */
+        .product.featured h2 { color: green; }
+
+        /* 6. article > p - Chữ nghiêng */
+        article > p { font-style: italic; }
+
+        /* 7. a[href="/"] - Gạch chân */
+        a[href="/"] { text-decoration: underline; color: purple; }
+
+        /* 8. .top-bar.dark h1 - Đổi phông chữ */
+        .top-bar.dark h1 { font-family: 'Courier New', Courier, monospace; }
+        
+        /* Style bổ sung để dễ nhìn */
+        body { font-family: sans-serif; padding: 20px; }
+        .product { border-bottom: 1px solid #ccc; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<div id="app">
+    <header class="top-bar dark">
+        <h1>ShopTLU</h1>
+        <nav>
+            <a href="/" class="active">Home</a>
+            <a href="/products">Products</a>
+            <a href="/about">About</a>
+        </nav>
+    </header>
+    <main>
+        <article class="product">
+            <h2>iPhone 16</h2>
+            <p class="price">25.990.000đ</p>
+            <p>Mô tả sản phẩm...</p>
+        </article>
+        <article class="product featured">
+            <h2>MacBook Pro</h2>
+            <p class="price">45.990.000đ</p>
+            <p>Mô tả sản phẩm...</p>
+        </article>
+    </main>
+</div>
+
+</body>
+</html>
