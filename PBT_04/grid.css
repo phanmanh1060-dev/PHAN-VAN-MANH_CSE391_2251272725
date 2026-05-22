@@ -1,0 +1,213 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #333;
+    padding: 10px;
+}
+
+/* CONTAINER CHÍNH SỬ DỤNG CSS GRID */
+.app-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    /* Cấu trúc 3 cột: Cố định 2 bên 200px, giữa co giãn linh hoạt tối thiểu 600px */
+    grid-template-columns: 200px minmax(600px, 1fr) 200px;
+    gap: 20px;
+    
+    /* Định nghĩa Named Areas (Nâng cao) */
+    grid-template-areas: 
+        "header header header"
+        "hero   hero   hero"
+        "sidebar main   ads"
+        "footer footer footer";
+}
+
+/* ÁNH XẠ CÁC VÙNG VÀO GRID AREA */
+.header {
+    grid-area: header;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.hero {
+    grid-area: hero;
+    background: linear-gradient(135deg, #e67e22, #f1c40f);
+    color: white;
+    padding: 40px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e1e8ed;
+}
+
+.main-content {
+    grid-area: main;
+}
+
+.ads {
+    grid-area: ads;
+    background-color: #f1f2f6;
+    border-radius: 6px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+/* CSS Phụ trợ tạo kiểu dáng nhanh cho khối */
+.header .logo { font-size: 22px; font-weight: bold; }
+.header .search-bar { background: rgba(255,255,255,0.2); padding: 8px 15px; border-radius: 4px; width: 40%; }
+.filter-group { margin-top: 20px; display: flex; flex-direction: column; gap: 8px; }
+.ads-banner { height: 100%; min-height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 20px; text-align: center; background-color: #dfe4ea; border: 2px dashed #a4b0be; border-radius: 6px; color: #747d8c; }
+.ads-banner p { font-weight: bold; margin-bottom: 10px; color: #2f3542; }
+
+/* ==========================================
+   PHẦN 2: GRID CON CHO PRODUCTS VÀ BONUS
+   ========================================== */
+
+/* Lưới con của Main: Chia cố định 3 cột đều nhau */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* Cấu trúc thẻ sản phẩm chung */
+.product-card {
+    background-color: white;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column; /* Đút các item bên trong theo chiều dọc */
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border-color: #bdc3c7;
+}
+
+.card-img {
+    height: 150px;
+    background-color: #f1f2f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a4b0be;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.card-info h3 {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #2c3e50;
+}
+
+.card-info .price {
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.btn-add {
+    width: 100%;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 8px;
+    margin-top: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.btn-add:hover { background-color: #2980b9; }
+
+/* 🌟 XỬ LÝ CARD NỔI BẬT (BONUS 5Đ) */
+.featured-card {
+    grid-column: span 2; /* Chiếm diện tích bằng 2 cột gộp lại */
+    background: linear-gradient(to right, #ffffff, #fff9f3);
+    border: 1px solid #f39c12;
+    position: relative;
+}
+
+/* Điều chỉnh lại layout bên trong card nổi bật sang dạng ngang cho đẹp mắt */
+.featured-card .card-img {
+    height: 200px;
+    background-color: #ffeaa7;
+    color: #d35400;
+}
+
+.featured-card .old-price {
+    text-decoration: line-through;
+    color: #7f8c8d;
+    font-size: 13px;
+    margin-left: 8px;
+    font-weight: normal;
+}
+
+.featured-card .desc {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #7f8c8d;
+}
+
+.featured-card .badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e67e22;
+    color: white;
+    padding: 3px 8px;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+/* Responsive bổ sung: nếu màn hình hẹp lại thì tự rã về 1 cột tránh vỡ layout */
+@media (max-width: 1024px) {
+    .app-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "hero"
+            "sidebar"
+            "main"
+            "ads"
+            "footer";
+    }
+    .product-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .product-grid { grid-template-columns: 1fr; }
+    .featured-card { grid-column: span 1; }
+}

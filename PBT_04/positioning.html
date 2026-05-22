@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Positioning Demo</title>
+    <link rel="stylesheet" href="positioning.css" />
+  </head>
+  <body>
+    <!-- 1. Fixed Header -->
+    <header class="header">
+      <div class="logo">ShopTĐ</div>
+      <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#">Sản phẩm</a>
+        <a href="#">Liên hệ</a>
+      </nav>
+    </header>
+
+    <div class="page">
+      <!-- 2. Sticky Sidebar -->
+      <aside class="sidebar">
+        <strong>Danh mục</strong>
+        <ul>
+          <li>Điện thoại</li>
+          <li>Laptop</li>
+          <li>Đồng hồ</li>
+          <li>Phụ kiện</li>
+        </ul>
+      </aside>
+
+      <!-- Main content -->
+      <main class="main">
+        <!-- 3. Product cards với badge HOT -->
+        <div class="product-grid">
+          <div class="card">
+            <div class="card__badge">HOT</div>
+            <div class="card__name">iPhone 15 Pro</div>
+            <div class="card__price">28.990.000đ</div>
+          </div>
+
+          <div class="card">
+            <div class="card__badge">HOT</div>
+            <div class="card__name">MacBook Air M3</div>
+            <div class="card__price">32.990.000đ</div>
+          </div>
+
+          <div class="card">
+            <div class="card__badge">HOT</div>
+            <div class="card__name">AirPods Pro</div>
+            <div class="card__price">6.490.000đ</div>
+          </div>
+        </div>
+
+        <div class="extra">
+          <p>Nội dung ví dụ để chứng minh sticky</p>
+          <p>Nội dung ví dụ để chứng minh sticky</p>
+          <p>Nội dung ví dụ để chứng minh sticky</p>
+          <p>Nội dung ví dụ để chứng minh sticky</p>
+        </div>
+      </main>
+    </div>
+
+    <!-- 4. Scroll to top button -->
+    <button class="scroll-top">↑</button>
+  </body>
+</html>
