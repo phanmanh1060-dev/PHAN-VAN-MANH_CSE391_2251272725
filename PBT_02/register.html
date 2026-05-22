@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký tài khoản - E-Commerce</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 700px; margin: 40px auto; padding: 20px; }
+        fieldset { margin-bottom: 25px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+        legend { font-weight: bold; font-size: 1.2em; padding: 0 10px; }
+        label { display: block; margin: 12px 0 5px; font-weight: 500; }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 12px 24px;
+            margin-right: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .submit-btn { background: #28a745; color: white; }
+        .reset-btn { background: #dc3545; color: white; }
+    </style>
+</head>
+<body>
+
+    <h1>Đăng ký tài khoản</h1>
+    <p>Tham gia mua sắm cùng hàng ngàn khách hàng khác.</p>
+
+    <form action="#" method="POST">
+
+        
+        <fieldset>
+            <legend>1. Thông tin cá nhân</legend>
+            
+            <label for="fullname">Họ và tên</label>
+            <input type="text" id="fullname" name="fullname" 
+                   placeholder="Nguyễn Văn A" required minlength="2" maxlength="50">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" 
+                   placeholder="example@email.com" required>
+
+            <label for="phone">Số điện thoại</label>
+            <input type="tel" id="phone" name="phone" 
+                   placeholder="0912345678" required pattern="[0-9]{10}">
+
+            <label for="dob">Ngày sinh</label>
+            <input type="date" id="dob" name="dob" 
+                   max="2026-05-18" required>
+        </fieldset>
+
+        
+        <fieldset>
+            <legend>2. Tài khoản</legend>
+            
+            <label for="username">Tên đăng nhập</label>
+            <input type="text" id="username" name="username" 
+                   placeholder="user123" required 
+                   pattern="^[a-zA-Z0-9_]{3,20}$" title="3-20 ký tự, chỉ chữ cái, số và dấu gạch dưới">
+
+            <label for="password">Mật khẩu</label>
+            <input type="password" id="password" name="password" 
+                   placeholder="Mật khẩu tối thiểu 8 ký tự" required 
+                   minlength="8" 
+                   pattern="(?=.*[A-Z])(?=.*\d).{8,}" 
+                   title="Ít nhất 8 ký tự, bao gồm 1 chữ hoa và 1 số">
+
+            <label for="confirm_password">Xác nhận mật khẩu</label>
+            <input type="password" id="confirm_password" name="confirm_password" 
+                   placeholder="Nhập lại mật khẩu" required 
+                   minlength="8">
+        </fieldset>
+
+        
+        <fieldset>
+            <legend>3. Thông tin giao hàng</legend>
+            
+            <label for="city">Thành phố / Tỉnh</label>
+            <select id="city" name="city" required>
+                <option value="">-- Chọn thành phố --</option>
+                <option value="hanoi">Hà Nội</option>
+                <option value="hcm">TP. Hồ Chí Minh</option>
+                <option value="danang">Đà Nẵng</option>
+                <option value="haiphong">Hải Phòng</option>
+                <option value="cantho">Cần Thơ</option>
+                <option value="other">Tỉnh khác</option>
+            </select>
+
+            <label for="district">Quận / Huyện</label>
+            <select id="district" name="district" required>
+                <option value="">-- Chọn quận/huyện --</option>
+                <option value="q1">Quận 1</option>
+                <option value="q3">Quận 3</option>
+                <option value="q7">Quận 7</option>
+                <option value="bt">Bình Thạnh</option>
+                <option value="other">Khác</option>
+            </select>
+
+            <label for="address">Địa chỉ chi tiết</label>
+            <textarea id="address" name="address" rows="3" 
+                      placeholder="Số nhà, tên đường, phường/xã..." required></textarea>
+
+            <label>Giới tính</label>
+            <label style="display:inline-flex; align-items:center; margin-right:20px;">
+                <input type="radio" name="gender" value="male" required> Nam
+            </label>
+            <label style="display:inline-flex; align-items:center; margin-right:20px;">
+                <input type="radio" name="gender" value="female"> Nữ
+            </label>
+            <label style="display:inline-flex; align-items:center;">
+                <input type="radio" name="gender" value="other"> Khác
+            </label>
+        </fieldset>
+
+        <!-- Checkbox điều khoản -->
+        <label style="margin: 20px 0; display:flex; align-items:center;">
+            <input type="checkbox" name="terms" required>
+            <span style="margin-left:8px;">
+                Tôi đồng ý với <a href="#">Điều khoản dịch vụ</a> và 
+                <a href="#">Chính sách bảo mật</a>
+            </span>
+        </label>
+
+        <!-- Buttons -->
+        <button type="submit" class="submit-btn">Đăng ký</button>
+        <button type="reset" class="reset-btn">Làm lại</button>
+
+    </form>
+
+</body>
+</html>

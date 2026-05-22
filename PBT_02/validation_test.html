@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-8 max-w-2xl mx-auto">
+    <h1 class="text-3xl font-bold mb-8">HTML5 Validation Test</h1>
+    
+    <form id="testForm" class="space-y-6">
+        <div>
+            <label>1. Required Field</label>
+            <input type="text" required class="border p-3 w-full rounded">
+        </div>
+        <div>
+            <label>2. Email Validation</label>
+            <input type="email" value="abc" class="border p-3 w-full rounded">
+        </div>
+        <div>
+            <label>3. Number min/max</label>
+            <input type="number" min="1" max="10" value="15" class="border p-3 w-full rounded">
+        </div>
+        <div>
+            <label>4. Pattern (10 số)</label>
+            <input type="text" pattern="[0-9]{10}" value="abc123" class="border p-3 w-full rounded">
+        </div>
+        <div>
+            <label>5. Minlength Password</label>
+            <input type="password" minlength="8" value="123" class="border p-3 w-full rounded">
+        </div>
+
+        <button type="submit" class="bg-blue-600 text-white px-8 py-4 rounded-xl">
+            Submit Form
+        </button>
+    </form>
+</body>
+</html>
