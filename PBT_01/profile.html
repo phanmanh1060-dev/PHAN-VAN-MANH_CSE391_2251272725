@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHAN VĂN MẠNH - Sinh viên Lập trình Web</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans">
+
+    <header class="bg-white shadow sticky top-0 z-50">
+        <nav class="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-blue-600">Hyun</h1>
+            <div class="flex gap-8 text-lg">
+                <a href="#ve-toi" class="hover:text-blue-600 font-medium">Về tôi</a>
+                <a href="#ky-nang" class="hover:text-blue-600 font-medium">Kỹ năng</a>
+                <a href="#lien-he" class="hover:text-blue-600 font-medium">Liên hệ</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+
+        <!-- Section 1: Về tôi -->
+        <section id="ve-toi" class="mb-16">
+            <article>
+                <h2 class="text-4xl font-bold mb-6">Về tôi</h2>
+                <div class="flex flex-col md:flex-row gap-10 items-center">
+                    <figure class="flex-shrink-0">
+                        <img src="https://picsum.photos/id/64/400/400" 
+                             alt="Ảnh đại diện của Hyun" 
+                             class="w-80 h-80 object-cover rounded-3xl shadow-xl">
+                        <figcaption class="text-center mt-3 text-gray-600 font-medium">
+                            PHAN VĂN MẠNH - Sinh viên năm 4 CNTT
+                        </figcaption>
+                    </figure>
+                    <div>
+                        <p class="text-lg leading-relaxed text-gray-700">
+                            Xin chào! Mình là PHAN VĂN MẠNH, hiện đang là sinh viên năm 3 chuyên ngành Công nghệ Thông tin. 
+                            Mình đam mê lập trình web và đang tập trung học HTML, CSS, JavaScript. 
+                            Mục tiêu của mình là trở thành một Full-stack Developer chuyên nghiệp.
+                        </p>
+                        <p class="mt-4 text-lg leading-relaxed text-gray-700">
+                            Ngoài học tập, mình thích đọc sách, chơi thể thao và khám phá các công nghệ mới.
+                        </p>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Section 2: Kỹ năng -->
+        <section id="ky-nang" class="mb-16">
+            <h2 class="text-4xl font-bold mb-8">Kỹ năng</h2>
+            <table class="w-full border-collapse">
+                <thead>
+                    <tr class="bg-blue-600 text-white">
+                        <th class="p-4 text-left">Kỹ năng</th>
+                        <th class="p-4 text-left">Mức độ</th>
+                        <th class="p-4 text-left">Ghi chú</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
+                        <td class="p-4">HTML5</td>
+                        <td class="p-4">⭐⭐⭐⭐</td>
+                        <td class="p-4">Thành thạo Semantic HTML</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="p-4">CSS3</td>
+                        <td class="p-4">⭐⭐⭐</td>
+                        <td class="p-4">Flexbox, Grid, Responsive</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="p-4">JavaScript</td>
+                        <td class="p-4">⭐⭐</td>
+                        <td class="p-4">Đang học và áp dụng</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="p-4">Tailwind CSS</td>
+                        <td class="p-4">⭐⭐⭐</td>
+                        <td class="p-4">Đang học và áp dụng</td>
+                    </tr>
+                    <tr>
+                        <td class="p-4">Git & GitHub</td>
+                        <td class="p-4">⭐⭐</td>
+                        <td class="p-4">Version Control</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="bg-gray-100">
+                        <td colspan="3" class="p-4 text-center text-sm text-gray-600">
+                            Cập nhật lần cuối: Tháng 5/2026
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+
+    </main>
+
+    <!-- Aside - Thông tin liên hệ -->
+    <aside class="max-w-5xl mx-auto px-6 py-10 bg-white border-t">
+        <h2 class="text-3xl font-bold mb-6">Liên hệ</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="flex items-center gap-4">
+                <i class="fas fa-envelope text-2xl text-blue-600"></i>
+                <div>
+                    <p class="font-medium">Email</p>
+                    <p>phanmanh1060@gmail.com</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <i class="fas fa-phone text-2xl text-blue-600"></i>
+                <div>
+                    <p class="font-medium">Số điện thoại</p>
+                    <p>0123 456 789</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <i class="fab fa-github text-2xl text-blue-600"></i>
+                <div>
+                    <p class="font-medium">GitHub</p>
+                    <p>phanmanh1060-dev</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center">
+        <p>&copy; 2026 Hyun. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
