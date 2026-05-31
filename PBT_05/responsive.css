@@ -1,0 +1,253 @@
+/* ==========================================================================
+   1. CSS MẶC ĐỊNH — PHIÊN BẢN DI ĐỘNG (< 768px)
+   ========================================================================== */
+
+/* Reset và Base cài đặt */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f7fafc;
+    color: #2d3748;
+    /* Font size gốc cho mobile */
+    font-size: 14px; 
+}
+
+/* Ảnh tương thích hoàn toàn (Yêu cầu đề bài) */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- HEADER & NAVIGATION (Mobile) --- */
+.header {
+    background-color: #1a202c;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Biểu tượng Hamburger menu trên di động */
+.hamburger-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    display: block; /* Hiện trên mobile */
+}
+
+/* Menu điều hướng thu gọn dạng dọc thả xuống */
+.nav-menu {
+    display: none; /* Mặc định ẩn đi */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #2d3748;
+    z-index: 1000;
+}
+
+.nav-menu.active {
+    display: block; /* Hiện khi nhấn vào nút hamburger */
+}
+
+.nav-menu ul {
+    list-style: none;
+    flex-direction: column;
+}
+
+.nav-menu ul li a {
+    display: block;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-bottom: 1px solid #4a5568;
+}
+
+.nav-menu ul li a:hover {
+    background-color: #4a5568;
+}
+
+/* --- MAIN LAYOUT COMPONENTS (Mobile) --- */
+.main-container {
+    display: flex;
+    flex-direction: column; /* Xếp chồng hàng dọc trên điện thoại */
+    padding: 15px;
+    gap: 15px;
+}
+
+/* Yêu cầu: Thanh bên ẩn trên thiết bị di động */
+.sidebar {
+    display: none; 
+}
+
+/* Yêu cầu: Thanh quảng cáo ẩn trên thiết bị di động */
+.ads-bar {
+    display: none;
+}
+
+/* --- PRODUCT GRID (Mobile: 1 Cột) --- */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Quy định 1 cột */
+    gap: 15px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.product-info {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 1.1rem; /* Kích thước chữ cho tiêu đề sản phẩm ở Mobile */
+    margin-bottom: 5px;
+}
+
+.product-price {
+    color: #e53e3e;
+    font-weight: bold;
+}
+
+/* --- FOOTER (Mobile) --- */
+.footer {
+    background-color: #1a202c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+
+/* ==========================================================================
+   2. TRUY VẤN PHƯƠNG TIỆN — PHIÊN BẢN MÁY TÍNH BẢNG (768px - 1023px)
+   ========================================================================== */
+@media (min-width: 768px) {
+    body {
+        font-size: 15px; /* Tăng cỡ chữ lên một chút cho Tablet */
+    }
+
+    /* Thay đổi cơ chế điều hướng: Quay lại menu ngang cơ bản */
+    .hamburger-btn {
+        display: none; /* Ẩn nút hamburger đi */
+    }
+
+    .nav-menu {
+        display: block; /* Luôn hiển thị */
+        position: static;
+        width: auto;
+        background: none;
+    }
+
+    .nav-menu ul {
+        display: flex; /* Sắp xếp các mục theo hàng ngang */
+        flex-direction: row;
+    }
+
+    .nav-menu ul li a {
+        border-bottom: none;
+        padding: 10px 15px;
+    }
+
+    /* Layout thiết kế theo đề bài: Sidebar nằm ngang trên lưới sản phẩm */
+    .main-container {
+        flex-direction: column; 
+    }
+
+    /* Hiện sidebar: Định dạng nằm ngang với ô chọn dropdown */
+    .sidebar {
+        display: block; 
+        background-color: #edf2f7;
+        padding: 15px;
+        border-radius: 6px;
+    }
+
+    .filter-group {
+        margin-top: 10px;
+    }
+
+    .filter-dropdown {
+        padding: 8px 12px;
+        width: 200px;
+        border: 1px solid #cbd5e0;
+        border-radius: 4px;
+    }
+
+    /* Yêu cầu: PRODUCT GRID chuyển thành 2 Cột */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+
+/* ==========================================================================
+   3. TRUY VẤN PHƯƠNG TIỆN — PHIÊN BẢN MÁY TÍNH ĐỂ BÀN (≥ 1024px)
+   ========================================================================== */
+@media (min-width: 1024px) {
+    body {
+        font-size: 16px; /* Cỡ chữ lớn tối ưu cho màn hình Desktop */
+    }
+
+    /* Thay đổi cấu trúc Layout chính thành 3 phần song song */
+    .main-container {
+        flex-direction: row; /* Chuyển thành hàng ngang */
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    /* Sidebar đặt bên trái, dạng cột dọc cố định độ rộng */
+    .sidebar {
+        flex: 0 0 240px; 
+        background-color: #ffffff;
+        border: 1px solid #e2e8f0;
+    }
+
+    .filter-dropdown {
+        width: 100%; /* Giãn rộng dropdown hết khung dọc sidebar */
+    }
+
+    /* Yêu cầu: PRODUCT GRID chuyển thành 4 Cột */
+    .product-grid {
+        flex: 1; /* Lấy toàn bộ không gian ở giữa */
+        grid-template-columns: repeat(4, 1fr); 
+    }
+
+    /* Hiện thanh Quảng cáo độc lập ở bên phải */
+    .ads-bar {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 200px; 
+        gap: 15px;
+    }
+
+    .ads-box {
+        background-color: #feebc8;
+        border: 2px dashed #dd6b20;
+        color: #dd6b20;
+        padding: 30px 15px;
+        text-align: center;
+        font-weight: bold;
+        border-radius: 6px;
+    }
+}
