@@ -1,0 +1,20 @@
+// scss/_variables.scss
+
+// 1. Mã màu hệ thống (Colors)
+$primary-color: #1a202c;     // Màu tối cho Header/Footer
+$secondary-color: #4f46e5;   // Màu tím xanh làm điểm nhấn (Accent/Buttons)
+$bg-light: #f7fafc;          // Màu nền trang web
+$text-dark: #2d3748;         // Màu chữ chính
+$color-danger: #e53e3e;      // Màu đỏ cho giá sản phẩm
+
+// 2. Phông chữ (Typography)
+$font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+// 3. Điểm dừng Responsive (Breakpoints)
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// 4. Hệ thống khoảng cách (Spacing)
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 32px;
