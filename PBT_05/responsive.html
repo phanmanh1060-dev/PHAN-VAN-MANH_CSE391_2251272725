@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Sản Phẩm Responsive</title>
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">MyStore</div>
+        
+        <button class="hamburger-btn" aria-label="Toggle navigation">☰</button>
+        
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        
+        <aside class="sidebar">
+            <h3>Bộ lọc sản phẩm</h3>
+            <div class="filter-group">
+                <select name="category" class="filter-dropdown">
+                    <option value="">Chọn danh mục</option>
+                    <option value="electronics">Điện tử</option>
+                    <option value="fashion">Thời trang</option>
+                </select>
+            </div>
+        </aside>
+
+        <main class="product-grid">
+            <article class="product-card">
+                <img src="https://picsum.photos/300/300?random=1" alt="Sản phẩm 1" class="product-img">
+                <div class="product-info">
+                    <h2 class="product-title">Sản phẩm cao cấp 01</h2>
+                    <p class="product-price">590.000 đ</p>
+                </div>
+            </article>
+            <article class="product-card">
+                <img src="https://picsum.photos/300/300?random=2" alt="Sản phẩm 2" class="product-img">
+                <div class="product-info">
+                    <h2 class="product-title">Sản phẩm cao cấp 02</h2>
+                    <p class="product-price">750.000 đ</p>
+                </div>
+            </article>
+            <article class="product-card">
+                <img src="https://picsum.photos/300/300?random=3" alt="Sản phẩm 3" class="product-img">
+                <div class="product-info">
+                    <h2 class="product-title">Sản phẩm cao cấp 03</h2>
+                    <p class="product-price">320.000 đ</p>
+                </div>
+            </article>
+            <article class="product-card">
+                <img src="https://picsum.photos/300/300?random=4" alt="Sản phẩm 4" class="product-img">
+                <div class="product-info">
+                    <h2 class="product-title">Sản phẩm cao cấp 04</h2>
+                    <p class="product-price">1.200.000 đ</p>
+                </div>
+            </article>
+            <article class="product-card">
+                <img src="https://picsum.photos/300/300?random=5" alt="Sản phẩm 5" class="product-img">
+                <div class="product-info">
+                    <h2 class="product-title">Sản phẩm cao cấp 05</h2>
+                    <p class="product-price">450.000 đ</p>
+                </div>
+            </article>
+            <article class="product-card">
+                <img src="https://picsum.photos/300/300?random=6" alt="Sản phẩm 6" class="product-img">
+                <div class="product-info">
+                    <h2 class="product-title">Sản phẩm cao cấp 06</h2>
+                    <p class="product-price">890.000 đ</p>
+                </div>
+            </article>
+            <article class="product-card">
+                <img src="https://picsum.photos/300/300?random=7" alt="Sản phẩm 7" class="product-img">
+                <div class="product-info">
+                    <h2 class="product-title">Sản phẩm cao cấp 07</h2>
+                    <p class="product-price">620.000 đ</p>
+                </div>
+            </article>
+            <article class="product-card">
+                <img src="https://picsum.photos/300/300?random=8" alt="Sản phẩm 8" class="product-img">
+                <div class="product-info">
+                    <h2 class="product-title">Sản phẩm cao cấp 08</h2>
+                    <p class="product-price">150.000 đ</p>
+                </div>
+            </article>
+        </main>
+
+        <aside class="ads-bar">
+            <div class="ads-box">Quảng cáo 1</div>
+            <div class="ads-box">Quảng cáo 2</div>
+        </aside>
+
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 MyStore. Tất cả quyền được bảo lưu.</p>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger-btn');
+        const navMenu = document.querySelector('.nav-menu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
