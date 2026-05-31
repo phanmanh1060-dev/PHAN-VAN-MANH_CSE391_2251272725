@@ -1,0 +1,8 @@
+// scss/style.scss
+
+// 1. Nhập các tệp cấu hình hệ thống trước
+@import 'variables';
+@import 'mixins';
+
+// 2. Nhập tệp chứa giao diện thành phần sau để áp dụng được biến và mixin
+@import 'components';

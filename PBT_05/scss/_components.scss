@@ -1,0 +1,191 @@
+// scss/_components.scss
+
+/* Base Cài Đặt Chung */
+body {
+    font-family: $font-primary;
+    background-color: $bg-light;
+    color: $text-dark;
+    margin: 0;
+}
+
+/* KHỐI LỒNG NHAU 1: Khối Header & Thanh điều hướng điều kiện */
+.header {
+    background-color: $primary-color;
+    color: white;
+    padding: $spacing-md;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+
+    .hamburger-btn {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.8rem;
+        cursor: pointer;
+        
+        @include respond-to(tablet) {
+            display: none; // Ẩn nút hamburger trên tablet/desktop bằng mixin
+        }
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #2d3748;
+        z-index: 1000;
+
+        &.active {
+            display: block; // Khi được toggle class active qua JS
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                a {
+                    display: block;
+                    color: white;
+                    padding: $spacing-md;
+                    text-decoration: none;
+
+                    &:hover {
+                        background-color: $secondary-color; // Áp dụng biến màu nhấn
+                    }
+                }
+            }
+        }
+
+        // Dùng mixin mở menu ngang trên màn hình lớn
+        @include respond-to(tablet) {
+            display: block;
+            position: static;
+            width: auto;
+            background: none;
+
+            ul {
+                display: flex;
+                li a { padding: 10px 15px; }
+            }
+        }
+    }
+}
+
+/* Cấu trúc Layout Tổng Thể */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    padding: $spacing-md;
+    gap: $spacing-md;
+
+    @include respond-to(desktop) {
+        flex-direction: row;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: $spacing-lg;
+    }
+}
+
+/* Các thành phần bổ trợ */
+.sidebar {
+    display: none;
+    @include respond-to(tablet) {
+        display: block;
+        background-color: #edf2f7;
+        padding: $spacing-md;
+    }
+    @include respond-to(desktop) {
+        flex: 0 0 240px;
+        background-color: white;
+    }
+}
+
+.ads-bar {
+    display: none;
+    @include respond-to(desktop) {
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 200px;
+    }
+}
+
+/* KHỐI LỒNG NHAU 2: Khối Lưới sản phẩm (Grid) */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr; // Mặc định mobile 1 cột
+    gap: $spacing-md;
+
+    @include respond-to(tablet) {
+        grid-template-columns: repeat(2, 1fr); // 2 cột trên tablet
+    }
+
+    @include respond-to(desktop) {
+        flex: 1;
+        grid-template-columns: repeat(4, 1fr); // 4 cột trên desktop
+    }
+}
+
+/* KHỐI LỒNG NHAU 3: Thẻ sản phẩm chi tiết (Product Card) */
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    @include card-shadow; // Gọi mixin đổ bóng và transition
+
+    // Hiệu ứng rê chuột vào thẻ sản phẩm
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    }
+
+    // Biến thể bổ sung: Thẻ sản phẩm nổi bật đặc biệt
+    &.featured {
+        border: 2px solid $secondary-color;
+        position: relative;
+    }
+
+    .img-container {
+        width: 100%;
+        overflow: hidden;
+        
+        .product-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .product-info {
+        padding: $spacing-md;
+
+        .product-title {
+            font-size: 1.1rem;
+            margin-bottom: $spacing-sm;
+        }
+
+        .product-price {
+            color: $color-danger; // Gọi biến màu đỏ
+            font-weight: bold;
+        }
+    }
+}
+
+/* Khối Footer */
+.footer {
+    background-color: $primary-color;
+    color: white;
+    text-align: center;
+    padding: $spacing-md;
+    margin-top: $spacing-lg;
+}
