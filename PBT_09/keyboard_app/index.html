@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Shortcuts & Accessibility App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <section class="shortcuts-guide" aria-labelledby="guide-title">
+            <h2 id="guide-title">⌨️ Phím Tắt Hệ Thống</h2>
+            <ul>
+                <li><kbd>Ctrl</kbd> + <kbd>K</kbd>: Mở Command Palette</li>
+                <li><kbd>←</kbd> / <kbd>→</kbd>: Chuyển ảnh tiếp theo / trước đó</li>
+                <li><kbd>1</kbd> - <kbd>4</kbd>: Nhảy nhanh đến ảnh tương ứng</li>
+                <li><kbd>Space</kbd>: Bật/Tắt Slideshow tự động chạy</li>
+                <li><kbd>Esc</kbd>: Đóng Modal hoặc Command Palette</li>
+            </ul>
+        </section>
+
+        <main class="gallery-section">
+            <h2 id="gallery-title">🖼️ Interactive Image Gallery</h2>
+            <div class="slideshow-controls">
+                <button id="playPauseBtn" class="btn" aria-label="Bắt đầu chạy slideshow tự động">▶️ Play Slideshow</button>
+                <span id="slideshowStatus" role="status" aria-live="polite">Đang dừng</span>
+            </div>
+            
+            <div class="gallery-grid" role="list" aria-labelledby="gallery-title">
+                </div>
+        </main>
+    </div>
+
+    <div id="lightboxModal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-image-title">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModalBtn" aria-label="Đóng cửa sổ hình ảnh">&times;</button>
+            <h3 id="modal-image-title" class="sr-only">Hình ảnh phóng to</h3>
+            <img id="modalImage" src="" alt="">
+            <div class="modal-nav">
+                <button id="prevImgBtn" class="btn-nav" aria-label="Ảnh trước">&lt;</button>
+                <button id="nextImgBtn" class="btn-nav" aria-label="Ảnh tiếp theo">&gt;</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="commandPalette" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Hộp lệnh tìm kiếm nhanh">
+        <div class="palette-content">
+            <div class="palette-search-wrapper">
+                <input type="text" id="paletteInput" placeholder="Gõ lệnh tìm kiếm... (Ví dụ: Dark, Play, Photo)" autocomplete="off" aria-label="Nhập lệnh cần thực hiện">
+            </div>
+            <ul id="commandList" role="listbox" aria-label="Danh sách lệnh gợi ý">
+                </ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
