@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thư Viện Ảnh Cuộn Vô Cực - Infinite Scroll Gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Thư Viện Ảnh Vô Cực</h1>
+        
+        <div id="gallery-grid" class="gallery-grid"></div>
+
+        <div id="load-trigger" class="load-trigger">
+            <div class="spinner"></div>
+            <p>Đang tải thêm ảnh...</p>
+        </div>
+    </div>
+
+    <div id="lightbox" class="lightbox hidden">
+        <span class="close-lightbox">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="Zoomed Photo">
+            <p id="lightbox-caption"></p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
