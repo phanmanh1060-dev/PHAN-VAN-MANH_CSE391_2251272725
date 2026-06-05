@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bảng Điều Khiển Đa API - Multi-API Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="dashboard-header">
+            <div>
+                <h1>Bảng Điều Khiển Tổng Hợp</h1>
+                <p id="load-time" class="load-time">Bấm "Làm mới tất cả" để nạp dữ liệu...</p>
+            </div>
+            <button id="refresh-btn" class="btn-refresh">🔄 Làm mới tất cả</button>
+        </header>
+
+        <div id="global-loading" class="global-loading hidden">
+            <div class="spinner"></div>
+            <p>Đang đồng bộ hóa dữ liệu từ hệ thống các API...</p>
+        </div>
+
+        <main class="dashboard-grid">
+            
+            <section id="widget-0" class="widget-card">
+                <h2>🌤️ Thời Tiết Hiện Tại</h2>
+                <div class="widget-content"></div>
+            </section>
+
+            <section id="widget-1" class="widget-card">
+                <h2>📰 Bài Viết Xem Nhiều</h2>
+                <div class="widget-content"></div>
+            </section>
+
+            <section id="widget-2" class="widget-card">
+                <h2>🐶 Thú Cưng Giải Trí</h2>
+                <div class="widget-content"></div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
